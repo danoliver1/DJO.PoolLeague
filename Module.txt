@@ -1,0 +1,30 @@
+﻿Name: Pool League
+AntiForgery: enabled
+Author: Dan Oliver
+Category: Pool
+Website: http://github.com/danoliver1
+Version: 1.0
+OrchardVersion: 1.9.2
+Description: Description for the module
+Dependencies: Orchard.Layouts.Projections, Orchard.Projections
+Features:
+    DJO.PoolLeague.Points.SevenBall:
+        Name: Seven Ball Points
+        Description: Awards extra points for 7 balling the opponent.
+        Dependencies: DJO.PoolLeague
+        Category: Pool Points Calculators
+	DJO.PoolLeague.Points.StreakBuster:
+        Name: Streak Buster Points
+        Description: Awards extra points for defeating a 5 game winning streak.
+        Dependencies: DJO.PoolLeague
+        Category: Pool Points Calculators
+	DJO.PoolLeague.Points.Default:
+        Name: Default Points
+        Description: A default number of points for a game.
+        Dependencies: DJO.PoolLeague
+        Category: Pool Points Calculators
+	DJO.PoolLeague.Points.RankDifference:
+		Name: Rank Difference Points
+        Description: Bonus points for beating someone above or close to you in the league.
+        Dependencies: DJO.PoolLeague
+        Category: Pool Points Calculators

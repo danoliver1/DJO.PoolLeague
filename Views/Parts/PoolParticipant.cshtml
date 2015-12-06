@@ -1,0 +1,24 @@
+﻿@{
+    Script.Require("RankLeague").AtFoot();
+    Style.Require("PoolLeague");
+}
+
+<div class="league-row">
+    <span class="rank">
+    </span>
+    <span class="display-name">
+        @Model.Part.DisplayName
+    </span>
+    <span>
+        @Model.Part.GamesWon
+    </span>
+    <span>
+        @Model.Part.GamesLost
+    </span>
+    <span>
+        @Model.Part.WinStreak
+    </span>
+    <span>
+        @Model.Part.Points
+    </span>
+</div>

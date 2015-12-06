@@ -1,0 +1,21 @@
+.league-header-row {
+    background: #000;
+    color: #fff;
+}
+
+.league-header-row, .league-row {
+    width: 100%;
+}
+
+    .league-header-row span, .league-row span {
+        width: 14%;
+        display: inline-block;
+    }
+
+        .league-header-row span.rank, .league-row span.rank {
+            width: 10%;
+        }
+
+        .league-header-row span.display-name, .league-row span.display-name {
+            width: 28%;
+        }

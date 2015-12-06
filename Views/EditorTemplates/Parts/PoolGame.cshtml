@@ -1,0 +1,14 @@
+﻿@model DJO.PoolLeague.ViewModels.PoolGameEditorViewModel
+
+<fieldset>
+    @Html.LabelFor(m => m.WinnerId, T("Winner"))
+    @Html.DropDownListFor(m => m.WinnerId, Model.Participants.Select(x => new SelectListItem { Text = x.PoolParticipantPart.DisplayName, Value = x.Id.ToString(), Selected = x.Id == Model.WinnerId }))
+</fieldset>
+<fieldset>
+    @Html.LabelFor(m => m.LoserId, T("Loser"))
+    @Html.DropDownListFor(m => m.LoserId, Model.Participants.Select(x => new SelectListItem { Text = x.PoolParticipantPart.DisplayName, Value = x.Id.ToString(), Selected = x.Id == Model.LoserId }))
+</fieldset>
+<fieldset>
+    @Html.LabelFor(m => m.WonBy, T("Won By"))
+    @Html.EnumDropDownListFor(m => m.WonBy)
+</fieldset>

@@ -1,0 +1,10 @@
+﻿@using DJO.PoolLeague.Services
+@using DJO.PoolLeague.Models
+
+@{
+    var winner = Model.Winner == null ? "[unknown]" : Model.Winner.DisplayName;
+    var loser = Model.Loser == null ? "[unknown]" : Model.Loser.DisplayName;
+    var wonBy = (Enum)Model.Part.WonBy;
+}
+
+@winner beat @loser (@wonBy.GetDisplayName()) - @Model.Part.Points points

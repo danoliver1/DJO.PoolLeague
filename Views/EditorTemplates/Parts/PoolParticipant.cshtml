@@ -1,0 +1,10 @@
+﻿@model DJO.PoolLeague.Models.PoolParticipantPart
+
+<fieldset>
+    @Html.LabelFor(m => m.DisplayName, T("Pool Display Name"))
+    @Html.TextBoxFor(m => m.DisplayName, new { @class = "text medium" })
+</fieldset>
+<fieldset>
+    @Html.LabelFor(m => m.Active, T("Pool Active?"))
+    @Html.CheckBoxFor(m => m.Active)
+</fieldset>

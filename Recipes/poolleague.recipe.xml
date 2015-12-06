@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Exported from Orchard-->
+<Orchard>
+  <Recipe>
+    <Name>Pool League</Name>
+    <Description>Sets up pool league queries and page "~/PoolLeague/"</Description>
+    <Version>1.0</Version>
+  </Recipe>
+  <Content>
+    <Query Id="/Identifier=a4a457f68f164f39a80cc5305ca25fbf" Status="Published">
+      <IdentityPart Identifier="a4a457f68f164f39a80cc5305ca25fbf" />
+      <QueryPart>
+        <FilterGroups>
+          <FilterGroup>
+            <Filter Category="Content" Description="" Position="0" State="&lt;Form&gt;&lt;Description&gt;&lt;/Description&gt;&lt;ContentTypes&gt;User&lt;/ContentTypes&gt;&lt;/Form&gt;" Type="ContentTypes" />
+            <Filter Category="PoolParticipantPartRecord" Description="" Position="1" State="&lt;Form&gt;&lt;Description&gt;&lt;/Description&gt;&lt;/Form&gt;" Type="Active" />
+          </FilterGroup>
+        </FilterGroups>
+        <SortCriteria>
+          <SortCriterion Category="PoolParticipantPartRecord" Description="" Position="0" State="" Type="Points" />
+        </SortCriteria>
+        <Layouts>
+          <Layout Category="Html" Description="" State="&lt;Form&gt;&lt;QueryId&gt;18&lt;/QueryId&gt;&lt;Category&gt;Html&lt;/Category&gt;&lt;Type&gt;Raw&lt;/Type&gt;&lt;Description&gt;&lt;/Description&gt;&lt;Display&gt;0&lt;/Display&gt;&lt;DisplayType&gt;Summary&lt;/DisplayType&gt;&lt;ContainerTag&gt;&lt;/ContainerTag&gt;&lt;ContainerId&gt;&lt;/ContainerId&gt;&lt;ContainerClass&gt;&lt;/ContainerClass&gt;&lt;ItemTag&gt;&lt;/ItemTag&gt;&lt;ItemClass&gt;&lt;/ItemClass&gt;&lt;Prepend&gt;&lt;/Prepend&gt;&lt;Separator&gt;&lt;/Separator&gt;&lt;Append&gt;&lt;/Append&gt;&lt;/Form&gt;" Display="0" DisplayType="Summary" Type="Raw">
+            <Properties />
+            <Group />
+          </Layout>
+        </Layouts>
+      </QueryPart>
+      <TitlePart Title="Pool League" />
+    </Query>
+    <Query Id="/Identifier=ed5daecb95074c4fa467b7ca6e683c7c" Status="Published">
+      <IdentityPart Identifier="ed5daecb95074c4fa467b7ca6e683c7c" />
+      <QueryPart>
+        <FilterGroups>
+          <FilterGroup>
+            <Filter Category="Content" Description="" Position="0" State="&lt;Form&gt;&lt;Description&gt;&lt;/Description&gt;&lt;ContentTypes&gt;PoolGame&lt;/ContentTypes&gt;&lt;/Form&gt;" Type="ContentTypes" />
+          </FilterGroup>
+        </FilterGroups>
+        <SortCriteria>
+          <SortCriterion Category="CommonPartRecord" Description="" Position="0" State="&lt;Form&gt;&lt;Description&gt;&lt;/Description&gt;&lt;Sort&gt;false&lt;/Sort&gt;&lt;/Form&gt;" Type="CreatedUtc" />
+        </SortCriteria>
+        <Layouts>
+          <Layout Category="Html" Description="" State="&lt;Form&gt;&lt;QueryId&gt;16&lt;/QueryId&gt;&lt;Category&gt;Html&lt;/Category&gt;&lt;Type&gt;Raw&lt;/Type&gt;&lt;Description&gt;&lt;/Description&gt;&lt;Display&gt;0&lt;/Display&gt;&lt;DisplayType&gt;Summary&lt;/DisplayType&gt;&lt;ContainerTag&gt;&lt;/ContainerTag&gt;&lt;ContainerId&gt;&lt;/ContainerId&gt;&lt;ContainerClass&gt;&lt;/ContainerClass&gt;&lt;ItemTag&gt;&lt;/ItemTag&gt;&lt;ItemClass&gt;&lt;/ItemClass&gt;&lt;Prepend&gt;&lt;/Prepend&gt;&lt;Separator&gt;&lt;/Separator&gt;&lt;Append&gt;&lt;/Append&gt;&lt;/Form&gt;" Display="0" DisplayType="Summary" Type="Raw">
+            <Properties />
+            <Group />
+          </Layout>
+        </Layouts>
+      </QueryPart>
+      <TitlePart Title="Recent Pool Games" />
+    </Query>
+    <Page Id="/alias=PoolLeague" Status="Published">
+      <AutoroutePart Alias="PoolLeague" UseCustomPattern="false" UseCulturePattern="false" PromoteToHomePage="false" />
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2015-12-05T19:29:00Z" PublishedUtc="2015-12-06T00:27:36.6766083Z" ModifiedUtc="2015-12-06T00:27:36.6065592Z" />
+      <LayoutPart>
+        <LayoutData>{"elements":[{"typeName":"Orchard.Layouts.Elements.Canvas","data":"","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Grid","data":"","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Row","data":"","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Column","data":"Width=7&amp;Offset=0&amp;Collapsible=null","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Heading","data":"Content=League&amp;Level=3","exportableData":"","index":0,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""},{"typeName":"Orchard.Layouts.Elements.Shape","data":"ShapeType=PoolLeagueHeaderRow","exportableData":"","index":1,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""},{"typeName":"Orchard.Layouts.Elements.Projection","data":"QueryLayoutId=13%3b1&amp;ItemsToDisplay=0&amp;Skip=0&amp;MaxItems=100&amp;PagerSuffix=","exportableData":"QueryId=%2fIdentifier%3da4a457f68f164f39a80cc5305ca25fbf&amp;LayoutIndex=0","index":2,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""},{"typeName":"Orchard.Layouts.Elements.Column","data":"Width=4&amp;Offset=1&amp;Collapsible=null","exportableData":"","index":1,"elements":[{"typeName":"Orchard.Layouts.Elements.Heading","data":"Content=Recent+Games&amp;Level=3","exportableData":"","index":0,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""},{"typeName":"Orchard.Layouts.Elements.Projection","data":"QueryLayoutId=14%3b2&amp;ItemsToDisplay=15&amp;Skip=0&amp;MaxItems=15&amp;PagerSuffix=","exportableData":"QueryId=%2fIdentifier%3ded5daecb95074c4fa467b7ca6e683c7c&amp;LayoutIndex=0","index":1,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""},{"typeName":"Orchard.Layouts.Elements.Shape","data":"ShapeType=AddNewGameLink","exportableData":"","index":1,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":"","rule":""}]}</LayoutData>
+      </LayoutPart>
+      <MenuPart Menu="/Identifier=5b9049ebb2d34ee49fe1faa6cba04ea9" MenuText="Pool League" MenuPosition="1" />
+      <TagsPart Tags="" />
+      <TitlePart Title="Pool League" />
+    </Page>
+  </Content>
+</Orchard>
