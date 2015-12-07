@@ -68,7 +68,7 @@ namespace DJO.PoolLeague.Drivers
             updater.TryUpdateModel(model, Prefix, null, null);
 
             if (model.WinnerId == model.LoserId)
-                updater.AddModelError("WinnerIsLoser", T("You cannot play a game against yourself"));
+                updater.AddModelError("WinnerIsLoser", T("Winner and Loser cannot be the same"));
            
 
             part.WinnerId = model.WinnerId;

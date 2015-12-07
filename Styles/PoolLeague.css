@@ -19,3 +19,13 @@
         .league-header-row span.display-name, .league-row span.display-name {
             width: 28%;
         }
+
+#player-stats {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+    #player-stats span {
+        width: 28%;
+        display: inline-block;
+    }

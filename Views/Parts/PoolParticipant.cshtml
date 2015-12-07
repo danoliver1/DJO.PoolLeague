@@ -10,15 +10,15 @@
         @Model.Part.DisplayName
     </span>
     <span>
-        @Model.Part.GamesWon
-    </span>
-    <span>
-        @Model.Part.GamesLost
-    </span>
-    <span>
         @Model.Part.WinStreak
     </span>
     <span>
+        @Model.Part.WinPercentage.ToString("P1")
+    </span>    
+    <span>
         @Model.Part.Points
+    </span>
+    <span>
+        <a href="~/PoolLeague/Details?id=@Model.Part.Id">Details</a>
     </span>
 </div>

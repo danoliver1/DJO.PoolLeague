@@ -1,0 +1,73 @@
+﻿@using DJO.PoolLeague.Services
+
+@{
+    Script.Require("RankLeague").AtFoot();
+    Style.Require("PoolLeague");
+
+    //TODO: this is temporary.. don't like logic being in the view
+    var httpContext = WorkContext.HttpContext;
+
+    if(httpContext == null)
+    {
+        Response.Redirect("~/PoolLeague");
+    }
+
+    var id = httpContext.Request.QueryString["id"];
+
+    int participantId;
+    if(!int.TryParse(id, out participantId))
+    {
+        Response.Redirect("~/PoolLeague");
+    }
+
+    var summary = WorkContext.Resolve<IPoolPlayerSummary>().GetPlayerSummary(participantId);
+
+    var participant = summary.Participant;
+
+    if (participant == null)
+    {
+        Response.Redirect("~/PoolLeague");
+    }
+}
+
+<h3>Player Statistics for @participant.DisplayName</h3>
+
+<div id="player-stats">
+    <div>
+        <span>Points: @participant.Points</span>
+        <span>Highest Points: @participant.HighestPoints</span>
+    </div>
+    <div>
+        <span>Streak: @participant.WinStreak</span>
+        <span>Highest Streak: @participant.BestWinStreak</span>
+    </div>
+</div>
+
+<div class="league-header-row">
+    <span class="display-name">
+        Name
+    </span>
+    <span>
+        Wins
+    </span>
+    <span>
+        Losses
+    </span>
+    <span>
+        Points
+    </span>
+    <span>
+        Win %
+    </span>
+</div>
+
+@foreach (var opponent in summary.Opponents)
+{
+    <div class="league-row">
+        <span class="display-name">@opponent.DisplayName</span>
+        <span>@opponent.Wins</span>
+        <span>@opponent.Losses</span>
+        <span>@opponent.Points</span>
+        <span>@opponent.WinPercentage.ToString("P1")</span>
+    </div>
+}

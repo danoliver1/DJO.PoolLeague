@@ -6,7 +6,7 @@
     <Description>Sets up pool league queries and page "~/PoolLeague/"</Description>
     <Version>1.0</Version>
   </Recipe>
-  <Content>
+  <Data>
     <Query Id="/Identifier=a4a457f68f164f39a80cc5305ca25fbf" Status="Published">
       <IdentityPart Identifier="a4a457f68f164f39a80cc5305ca25fbf" />
       <QueryPart>
@@ -34,6 +34,7 @@
         <FilterGroups>
           <FilterGroup>
             <Filter Category="Content" Description="" Position="0" State="&lt;Form&gt;&lt;Description&gt;&lt;/Description&gt;&lt;ContentTypes&gt;PoolGame&lt;/ContentTypes&gt;&lt;/Form&gt;" Type="ContentTypes" />
+            <Filter Category="PoolGamePartRecord" Description="" Position="1" State="&lt;Form&gt;&lt;Description&gt;&lt;/Description&gt;&lt;/Form&gt;" Type="ParticipantQueryString" />
           </FilterGroup>
         </FilterGroups>
         <SortCriteria>
@@ -58,5 +59,14 @@
       <TagsPart Tags="" />
       <TitlePart Title="Pool League" />
     </Page>
-  </Content>
+    <Page Id="/alias=PoolLeague\/Details" Status="Published">
+      <CommonPart Owner="/User.UserName=admin" CreatedUtc="2015-12-07T21:23:00Z" PublishedUtc="2015-12-07T22:50:05.1869138Z" ModifiedUtc="2015-12-07T22:50:05.1488115Z" />
+      <TitlePart Title="Pool Player Details" />
+      <LayoutPart>
+        <LayoutData>{"elements":[{"typeName":"Orchard.Layouts.Elements.Canvas","data":"","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Grid","data":"","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Row","data":"","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Column","data":"Width=8&amp;Offset=0","exportableData":"","index":0,"elements":[{"typeName":"Orchard.Layouts.Elements.Shape","data":"ShapeType=PoolParticipantDetails","exportableData":"","index":0,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""},{"typeName":"Orchard.Layouts.Elements.Column","data":"Width=4&amp;Offset=0","exportableData":"","index":1,"elements":[{"typeName":"Orchard.Layouts.Elements.Heading","data":"Level=3&amp;Text=Recent+Games&amp;Content=Recent+Games","exportableData":"","index":0,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""},{"typeName":"Orchard.Layouts.Elements.Projection","data":"QueryLayoutId=13%3b4&amp;ItemsToDisplay=15&amp;Skip=0&amp;MaxItems=15&amp;PagerSuffix=","exportableData":"QueryId=%2fIdentifier%3ded5daecb95074c4fa467b7ca6e683c7c&amp;LayoutIndex=0","index":1,"elements":[],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""}],"isTemplated":false,"htmlId":"","htmlClass":"","htmlStyle":""}]}</LayoutData>
+      </LayoutPart>
+      <AutoroutePart Alias="PoolLeague/Details" UseCustomPattern="false" />
+      <TagsPart Tags="" />
+    </Page>
+  </Data>
 </Orchard>

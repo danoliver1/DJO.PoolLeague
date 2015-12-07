@@ -6,7 +6,7 @@ Website: http://github.com/danoliver1
 Version: 1.0
 OrchardVersion: 1.9.2
 Description: Description for the module
-Dependencies: Orchard.Layouts.Projections, Orchard.Projections
+Dependencies: Orchard.Layouts.Projections,Orchard.Projections,Orchard.DynamicForms
 Features:
     DJO.PoolLeague.Points.SevenBall:
         Name: Seven Ball Points

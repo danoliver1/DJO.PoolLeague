@@ -51,7 +51,7 @@ namespace DJO.PoolLeague.Services
             if (winner.Points > winner.HighestPoints)
                 winner.HighestPoints = winner.Points;
 
-            winner.WinStreak = winner.WinStreak + 1;
+            winner.WinStreak = winner.WinStreak < 0 ? 1 : winner.WinStreak + 1;
 
             if (winner.WinStreak > winner.BestWinStreak)
                 winner.BestWinStreak = winner.WinStreak;
@@ -60,7 +60,7 @@ namespace DJO.PoolLeague.Services
 
             //update loser       
             loser.Points = loser.Points - poolGame.Points;
-            loser.WinStreak = 0;
+            loser.WinStreak = loser.WinStreak > 0 ? -1 : loser.WinStreak - 1;
             loser.GamesLost = loser.GamesLost + 1;
         }
     }

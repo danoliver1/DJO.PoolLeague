@@ -4,6 +4,7 @@ using Orchard.Localization;
 using Orchard.Themes;
 using System.Web.Mvc;
 using Orchard.UI.Notify;
+using Orchard.Mvc.Extensions;
 
 namespace DJO.PoolLeague.Controllers
 {
@@ -40,12 +41,7 @@ namespace DJO.PoolLeague.Controllers
             _services.ContentManager.Create(poolGame);
             _services.Notifier.Information(T("Your game has been saved."));
 
-            if (!string.IsNullOrEmpty(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
-
-            return RedirectToAction("Edit");
+            return this.RedirectLocal(returnUrl, "~/PoolLeague");
         }
 
         bool IUpdateModel.TryUpdateModel<TModel>(TModel model, string prefix, string[] includeProperties, string[] excludeProperties)
