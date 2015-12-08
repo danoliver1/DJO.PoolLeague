@@ -1,0 +1,33 @@
+﻿@{
+    Script.Require("RankLeague").AtFoot();
+    Style.Require("PoolLeague");
+}
+
+<div class="league-header-row">
+    <span class="display-name">
+        Name
+    </span>
+    <span>
+        Wins
+    </span>
+    <span>
+        Losses
+    </span>
+    <span>
+        Points
+    </span>
+    <span>
+        Win %
+    </span>
+</div>
+
+@foreach (var opponent in Model.Opponents)
+{
+    <div class="league-row">
+        <span class="display-name">@opponent.DisplayName</span>
+        <span>@opponent.Wins</span>
+        <span>@opponent.Losses</span>
+        <span>@opponent.Points</span>
+        <span>@opponent.WinPercentage.ToString("P1")</span>
+    </div>
+}

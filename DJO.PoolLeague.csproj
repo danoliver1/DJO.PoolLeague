@@ -112,7 +112,8 @@
     <Content Include="Views\PoolGame\NewGame.cshtml" />
     <Content Include="Views\AddNewGameLink.cshtml" />
     <Content Include="Views\PoolLeagueHeaderRow.cshtml" />
-    <Content Include="Views\PoolParticipantDetails.cshtml" />
+    <Content Include="Views\PoolParticipantDetails_Table.cshtml" />
+    <Content Include="Views\PoolParticipantDetails_Stats.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -156,6 +157,7 @@
     <Compile Include="PointsCalculators\IPointsCalculator.cs" />
     <Compile Include="Services\PointsManager.cs" />
     <Compile Include="Services\PoolPlayerSummary.cs" />
+    <Compile Include="Shapes.cs" />
     <Compile Include="ViewModels\ParticipantDetailsViewModel.cs" />
     <Compile Include="ViewModels\PoolGameEditorViewModel.cs" />
   </ItemGroup>

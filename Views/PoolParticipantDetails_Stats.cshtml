@@ -1,0 +1,16 @@
+﻿@{
+    Style.Require("PoolLeague");
+}
+
+<h3>Player Statistics for @Model.Participant.DisplayName</h3>
+
+<div id="player-stats">
+    <div>
+        <span>Points: @Model.Participant.Points</span>
+        <span>Highest Points: @Model.Participant.HighestPoints</span>
+    </div>
+    <div>
+        <span>Streak: @Model.Participant.WinStreak</span>
+        <span>Highest Streak: @Model.Participant.BestWinStreak</span>
+    </div>
+</div>
